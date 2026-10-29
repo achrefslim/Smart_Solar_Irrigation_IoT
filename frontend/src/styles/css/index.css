@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f2ff;
+  color: #1e1b4b;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track { background: rgba(109, 40, 217, 0.04); }
+
+/* ── Global background (used by ElectricBg component) ────── */
+#electric-global-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(150deg, #f5f3ff 0%, #eff6ff 50%, #e8f4ff 100%);
+}
+#electric-global-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(109, 40, 217, 0.09) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.pulse-line { display: none; }   /* not used in light theme */
+.electric-flow { display: none; }

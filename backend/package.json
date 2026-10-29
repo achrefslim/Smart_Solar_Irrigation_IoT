@@ -1,0 +1,17 @@
+{
+  "name": "iot-project-backend-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Firebase Realtime Database simulator for the IoT project dashboard.",
+  "main": "simulator.js",
+  "scripts": {
+    "start": "node simulator.js",
+    "demo": "node simulator.js --showcase",
+    "once": "node simulator.js --once",
+    "device": "node deviceSimulator.js",
+    "check": "node --check firebaseClient.js && node --check simulatorCore.js && node --check simulator.js && node --check deviceSimulator.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
